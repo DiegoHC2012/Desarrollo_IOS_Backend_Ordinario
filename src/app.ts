@@ -11,12 +11,14 @@ import subjectsRouter from "./routes/subjects.routes";
 import tasksRouter from "./routes/tasks.routes";
 import gradesRouter from "./routes/grades.routes";
 import studentRouter from "./routes/student.routes";
+import announcementsRouter from "./routes/announcements.routes";
 
 // --- Repositories ---
 import { SubjectsRepositoryFirebase } from "./modules/subjects/infrastructure/subjectsRepositoryFirebase";
 import { StudentRepositoryFirebase } from "./modules/student/infraestructure/studentRepositoryFirebase";
 import { TasksRepositoryFirebase } from "./modules/tasks/infraestructure/tasksRepositoryFirebase";
 import { GradesRepositoryFirebase } from "./modules/grades/infraestructure/gradesRepositoryFirebase";
+import { AnnouncementsRepositoryFirebase } from "./modules/announcements/infraestructure/announcementsRepositoryFirebase";
 
 const app = express();
 
@@ -43,6 +45,10 @@ container.register("StudentRepository", {
   useClass: StudentRepositoryFirebase,
 });
 
+container.register("AnnouncementsRepository", {
+  useClass: AnnouncementsRepositoryFirebase,
+});
+
 // ======================================================
 //   Rutas del sistema
 // ======================================================
@@ -50,6 +56,7 @@ app.use("/subjects", subjectsRouter);
 app.use("/tasks", tasksRouter);
 app.use("/grades", gradesRouter);
 app.use("/student", studentRouter);
+app.use("/announcements", announcementsRouter);
 
 // Ruta de prueba
 app.get("/", (_, res) => {
