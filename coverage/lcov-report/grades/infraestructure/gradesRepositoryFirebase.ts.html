@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for tasks/infraestructure/tasksRepositoryFirebase.ts</title>
+    <title>Code coverage report for grades/infraestructure/gradesRepositoryFirebase.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">tasks/infraestructure</a> tasksRepositoryFirebase.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">grades/infraestructure</a> gradesRepositoryFirebase.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -153,15 +153,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { injectable } from "tsyringe";</span>
 <span class="cstat-no" title="statement not covered" >import { db } from "../../../config/firebase";</span>
-import TasksRepository from "../domain/repository/tasksRepository";
-import CreateTaskBody from "../domain/dto/createTaskBody";
-import UpdateTaskBody from "../domain/dto/updateTaskBody";
+import GradesRepository from "../domain/repository/gradesRepository";
+import CreateGradeBody from "../domain/dto/createGradeBody";
+import UpdateGradeBody from "../domain/dto/updateGradeBody";
 &nbsp;
 @injectable()
-export <span class="cstat-no" title="statement not covered" >class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >TasksRepositoryFirebase </span>implements TasksRepository {</span></span>
-  
-<span class="fstat-no" title="function not covered" >  async </span>getTasks(institutionId: string, studentId: string): Promise&lt;any[]&gt; {
-    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/tasks/${studentId}`);</span>
+export <span class="cstat-no" title="statement not covered" >class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >GradesRepositoryFirebase </span>implements GradesRepository {</span></span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async </span>getGrades(institutionId: string, studentId: string, subjectId: string): Promise&lt;any[]&gt; {
+    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/grades/${studentId}/${subjectId}`);</span>
     const snapshot = <span class="cstat-no" title="statement not covered" >await ref.get();</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (!snapshot.exists()) <span class="cstat-no" title="statement not covered" >return [];</span></span>
@@ -172,26 +172,26 @@ export <span class="cstat-no" title="statement not covered" >class <span class="
     }));
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>getTask(institutionId: string, studentId: string, taskId: string): Promise&lt;any&gt; {
-    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/tasks/${studentId}/${taskId}`);</span>
+<span class="fstat-no" title="function not covered" >  async </span>getGrade(institutionId: string, studentId: string, subjectId: string, gradeId: string): Promise&lt;any&gt; {
+    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/grades/${studentId}/${subjectId}/${gradeId}`);</span>
     const snapshot = <span class="cstat-no" title="statement not covered" >await ref.get();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return snapshot.exists() ? { id: taskId, ...snapshot.val() } : null;</span>
+<span class="cstat-no" title="statement not covered" >    return snapshot.exists() ? { id: gradeId, ...snapshot.val() } : null;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>createTask(institutionId: string, studentId: string, data: CreateTaskBody): Promise&lt;string&gt; {
-    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/tasks/${studentId}`).push();</span>
+<span class="fstat-no" title="function not covered" >  async </span>createGrade(institutionId: string, studentId: string, subjectId: string, data: CreateGradeBody): Promise&lt;string&gt; {
+    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/grades/${studentId}/${subjectId}`).push();</span>
 <span class="cstat-no" title="statement not covered" >    await ref.set(data);</span>
 <span class="cstat-no" title="statement not covered" >    return ref.key!;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>updateTask(institutionId: string, studentId: string, taskId: string, data: UpdateTaskBody): Promise&lt;void&gt; {
-    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/tasks/${studentId}/${taskId}`);</span>
+<span class="fstat-no" title="function not covered" >  async </span>updateGrade(institutionId: string, studentId: string, subjectId: string, gradeId: string, data: UpdateGradeBody): Promise&lt;void&gt; {
+    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/grades/${studentId}/${subjectId}/${gradeId}`);</span>
 <span class="cstat-no" title="statement not covered" >    await ref.update(data);</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>deleteTask(institutionId: string, studentId: string, taskId: string): Promise&lt;void&gt; {
-    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/tasks/${studentId}/${taskId}`);</span>
+<span class="fstat-no" title="function not covered" >  async </span>deleteGrade(institutionId: string, studentId: string, subjectId: string, gradeId: string): Promise&lt;void&gt; {
+    const ref = <span class="cstat-no" title="statement not covered" >db.ref(`institutions/${institutionId}/grades/${studentId}/${subjectId}/${gradeId}`);</span>
 <span class="cstat-no" title="statement not covered" >    await ref.remove();</span>
   }
 }
