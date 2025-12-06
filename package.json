@@ -1,0 +1,41 @@
+{
+  "name": "desarrollo_ios_backend_ordinario",
+  "version": "1.0.0",
+  "description": "Backend para examen ordinario de desarrollo movil 2 (iOS)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoHC2012/Desarrollo_IOS_Backend_Ordinario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DiegoHC2012/Desarrollo_IOS_Backend_Ordinario/issues"
+  },
+  "homepage": "https://github.com/DiegoHC2012/Desarrollo_IOS_Backend_Ordinario#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "tsyringe": "^4.10.0"
+  }
+}
