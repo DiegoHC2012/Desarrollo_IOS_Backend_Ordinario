@@ -1,8 +1,357 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1765055187040" clover="3.2.0">
-  <project timestamp="1765055187040" name="All files">
-    <metrics statements="70" coveredstatements="27" conditionals="6" coveredconditionals="2" methods="26" coveredmethods="10" elements="102" coveredelements="39" complexity="0" loc="70" ncloc="70" packages="3" files="11" classes="11"/>
-    <package name="adapter">
+<coverage generated="1765059193864" clover="3.2.0">
+  <project timestamp="1765059193865" name="All files">
+    <metrics statements="359" coveredstatements="144" conditionals="32" coveredconditionals="12" methods="133" coveredmethods="53" elements="524" coveredelements="209" complexity="0" loc="359" ncloc="359" packages="15" files="56" classes="56"/>
+    <package name="announcements.adapter">
+      <metrics statements="25" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="createAnnouncementAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\adapter\createAnnouncementAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="deleteAnnouncementAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\adapter\deleteAnnouncementAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getAnnouncementAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\adapter\getAnnouncementAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getAnnouncementsAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\adapter\getAnnouncementsAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="updateAnnouncementAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\adapter\updateAnnouncementAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="announcements.infraestructure">
+      <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="announcementsRepositoryFirebase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\infraestructure\announcementsRepositoryFirebase.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="announcements.useCase">
+      <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+      <file name="createAnnouncementUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\useCase\createAnnouncementUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="deleteAnnouncementUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\useCase\deleteAnnouncementUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="getAnnouncementUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\useCase\getAnnouncementUseCase.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="getAnnouncementsUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\useCase\getAnnouncementsUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="updateAnnouncementUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\announcements\useCase\updateAnnouncementUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="grades.adapter">
+      <metrics statements="29" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="createGradeAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\adapter\createGradeAdapter.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="deleteGradeAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\adapter\deleteGradeAdapter.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="getGradeAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\adapter\getGradeAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getGradesAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\adapter\getGradesAdapter.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="updateGradeAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\adapter\updateGradeAdapter.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="grades.infraestructure">
+      <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="gradesRepositoryFirebase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\infraestructure\gradesRepositoryFirebase.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="grades.useCase">
+      <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="13"/>
+      <file name="createGradeUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\createGradeUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="deleteGradeUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\deleteGradeUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="getAverageUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\getAverageUseCase.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="getGradeUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\getGradeUseCase.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="getGradesUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\getGradesUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="updateGradeUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\grades\useCase\updateGradeUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="student.adapter">
+      <metrics statements="26" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="createStudentAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\adapter\createStudentAdapter.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="deleteStudentAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\adapter\deleteStudentAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getAllStudentsAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\adapter\getAllStudentsAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getStudentAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\adapter\getStudentAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="updateStudentAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\adapter\updateStudentAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="student.infraestructure">
+      <metrics statements="16" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="studentRepositoryFirebase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\infraestructure\studentRepositoryFirebase.ts">
+        <metrics statements="16" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="student.useCase">
+      <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+      <file name="createStudentUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\useCase\createStudentUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="deleteStudentUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\useCase\deleteStudentUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="getAllStudentsUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\useCase\getAllStudentsUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="getStudentUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\useCase\getStudentUseCase.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="updateStudentUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\student\useCase\updateStudentUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="subjects.adapter">
       <metrics statements="26" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
       <file name="createSubjectAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\subjects\adapter\createSubjectAdapter.ts">
         <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
@@ -46,7 +395,7 @@
         <line num="13" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="infrastructure">
+    <package name="subjects.infrastructure">
       <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="subjectsRepositoryFirebase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\subjects\infrastructure\subjectsRepositoryFirebase.ts">
         <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
@@ -69,7 +418,7 @@
         <line num="42" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="useCase">
+    <package name="subjects.useCase">
       <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
       <file name="createSubjectUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\subjects\useCase\createSubjectUseCase.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -112,6 +461,117 @@
         <line num="9" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="tasks.adapter">
+      <metrics statements="25" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="createTaskAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\adapter\createTaskAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="deleteTaskAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\adapter\deleteTaskAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getTaskAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\adapter\getTaskAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="getTasksAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\adapter\getTasksAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="updateTaskAdapter.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\adapter\updateTaskAdapter.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="tasks.infraestructure">
+      <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="tasksRepositoryFirebase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\infraestructure\tasksRepositoryFirebase.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="tasks.useCase">
+      <metrics statements="27" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="10"/>
+      <file name="createTaskUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\useCase\createTaskUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="deleteTaskUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\useCase\deleteTaskUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="getTaskUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\useCase\getTaskUseCase.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="getTasksUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\useCase\getTasksUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="updateTaskUseCase.ts" path="C:\Users\hcdie\Repositorios\Desarrollo_IOS_Backend_Ordinario\src\modules\tasks\useCase\updateTaskUseCase.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
     </package>
   </project>
