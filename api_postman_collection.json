@@ -1,0 +1,297 @@
+{
+  "info": {
+    "name": "School App API",
+    "_postman_id": "a1b2c3d4-5678-9012-3456-abcdef123456",
+    "description": "Colección completa para probar la API Escolar con Firebase y arquitectura hexagonal.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Subjects",
+      "item": [
+        {
+          "name": "Get All Subjects",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/subjects/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Get Subject by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/subjects/{{institutionId}}/{{studentId}}/{{subjectId}}"
+          }
+        },
+        {
+          "name": "Create Subject",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Matemáticas\",\n  \"description\": \"Álgebra avanzada\",\n  \"teacher\": \"Juan Pérez\",\n  \"schedule\": \"Lunes 10:00\"\n}"
+            },
+            "url": "{{baseUrl}}/subjects/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Update Subject",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"Álgebra lineal actualizada\",\n  \"schedule\": \"Martes 12:00\"\n}"
+            },
+            "url": "{{baseUrl}}/subjects/{{institutionId}}/{{studentId}}/{{subjectId}}"
+          }
+        },
+        {
+          "name": "Delete Subject",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/subjects/{{institutionId}}/{{studentId}}/{{subjectId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "Get All Tasks",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/tasks/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Get Task by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/tasks/{{institutionId}}/{{studentId}}/{{taskId}}"
+          }
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Tarea 1\",\n  \"description\": \"Resolver ecuaciones\",\n  \"dueDate\": \"2025-02-01\",\n  \"completed\": false\n}"
+            },
+            "url": "{{baseUrl}}/tasks/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"completed\": true\n}"
+            },
+            "url": "{{baseUrl}}/tasks/{{institutionId}}/{{studentId}}/{{taskId}}"
+          }
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/tasks/{{institutionId}}/{{studentId}}/{{taskId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grades",
+      "item": [
+        {
+          "name": "Get Grades of Subject",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/grades/{{institutionId}}/{{studentId}}/{{subjectId}}"
+          }
+        },
+        {
+          "name": "Get Grade by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/grades/{{institutionId}}/{{studentId}}/{{subjectId}}/{{gradeId}}"
+          }
+        },
+        {
+          "name": "Create Grade",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Parcial 1\",\n  \"value\": 90\n}"
+            },
+            "url": "{{baseUrl}}/grades/{{institutionId}}/{{studentId}}/{{subjectId}}"
+          }
+        },
+        {
+          "name": "Update Grade",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"value\": 95\n}"
+            },
+            "url": "{{baseUrl}}/grades/{{institutionId}}/{{studentId}}/{{subjectId}}/{{gradeId}}"
+          }
+        },
+        {
+          "name": "Delete Grade",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/grades/{{institutionId}}/{{studentId}}/{{subjectId}}/{{gradeId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Students",
+      "item": [
+        {
+          "name": "Get All Students",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/student/all/{{institutionId}}"
+          }
+        },
+        {
+          "name": "Get Student",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/student/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Luis Ortega\",\n  \"email\": \"luis@mail.com\",\n  \"career\": \"Ingeniería\",\n  \"group\": \"7A\"\n}"
+            },
+            "url": "{{baseUrl}}/student/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Update Student",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"group\": \"8A\"\n}"
+            },
+            "url": "{{baseUrl}}/student/{{institutionId}}/{{studentId}}"
+          }
+        },
+        {
+          "name": "Delete Student",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/student/{{institutionId}}/{{studentId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Announcements",
+      "item": [
+        {
+          "name": "Get All Announcements",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/announcements/{{institutionId}}"
+          }
+        },
+        {
+          "name": "Get Announcement by ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/announcements/{{institutionId}}/{{announcementId}}"
+          }
+        },
+        {
+          "name": "Create Announcement",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Suspensión de clases\",\n  \"message\": \"No hay clases el lunes\",\n  \"date\": \"2025-01-20\"\n}"
+            },
+            "url": "{{baseUrl}}/announcements/{{institutionId}}"
+          }
+        },
+        {
+          "name": "Update Announcement",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"Se reanudan el martes\"\n}"
+            },
+            "url": "{{baseUrl}}/announcements/{{institutionId}}/{{announcementId}}"
+          }
+        },
+        {
+          "name": "Delete Announcement",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/announcements/{{institutionId}}/{{announcementId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "WhiteLabel",
+      "item": [
+        {
+          "name": "Get Config",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/whitelabel/{{institutionId}}"
+          }
+        },
+        {
+          "name": "Create Config",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Instituto Nahual\",\n  \"logo\": \"https://logo.png\",\n  \"colors\": {\n    \"primary\": \"#FF0000\",\n    \"secondary\": \"#000000\"\n  },\n  \"welcomeMessage\": \"Bienvenido al portal académico\",\n  \"homeText\": \"Aquí verás tus clases y tareas\",\n  \"supportUrl\": \"https://support.nahual.com\"\n}"
+            },
+            "url": "{{baseUrl}}/whitelabel/{{institutionId}}"
+          }
+        },
+        {
+          "name": "Update Config",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"welcomeMessage\": \"Mensaje actualizado\"\n}"
+            },
+            "url": "{{baseUrl}}/whitelabel/{{institutionId}}"
+          }
+        }
+      ]
+    }
+
+  ]
+}
