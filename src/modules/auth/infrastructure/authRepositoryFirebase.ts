@@ -77,9 +77,10 @@ export class AuthRepositoryFirebase implements AuthRepository {
 
   async login(data: LoginRequest): Promise<LoginResponse> {
     try {
-      // Firebase Admin SDK doesn't have a method to verify password directly
-      // We need to get the user by email and create a custom token
-      // In a real app, you'd verify credentials on the client side or use a different approach
+      // NOTE: Firebase Admin SDK doesn't have a method to verify passwords server-side
+      // This is a limitation for testing/demo purposes as stated in requirements
+      // In production, client should authenticate using Firebase Client SDK and send ID token
+      // which can be verified server-side with admin.auth().verifyIdToken()
       
       // 1. Get user by email
       const userRecord = await admin.auth().getUserByEmail(data.email);
@@ -89,6 +90,8 @@ export class AuthRepositoryFirebase implements AuthRepository {
       // For this testing/demo API, we'll just generate a token
       
       // 2. Search for student associated with this UID
+      // NOTE: This O(n*m) search is acceptable for testing/demo with limited data
+      // In production, consider using a separate index collection mapping UIDs to student locations
       let studentData: any = null;
       let institutionId: string = "";
 
