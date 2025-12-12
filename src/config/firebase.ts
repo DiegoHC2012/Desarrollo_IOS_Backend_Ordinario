@@ -8,4 +8,6 @@ admin.initializeApp({
 });
 
 
-export const db = admin.firestore();
+export const db = admin. database(); 
+export const auth = admin. auth();  
+export const firestore = admin. firestore();

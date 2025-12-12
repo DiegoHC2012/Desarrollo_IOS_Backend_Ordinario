@@ -10,6 +10,7 @@ const Sidebar = () => {
     { path: '/tasks', label: 'Tasks', icon: '✅' },
     { path: '/grades', label: 'Grades', icon: '📊' },
     { path: '/students', label: 'Students', icon: '👥' },
+    { path: '/config', label: 'Configuration', icon: '⚙️' },
   ];
 
   return (

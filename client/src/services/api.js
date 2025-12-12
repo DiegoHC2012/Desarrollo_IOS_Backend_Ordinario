@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { adaptResponse } from './responseAdapter';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -23,9 +24,13 @@ api.interceptors.request.use(
   }
 );
 
-// Response interceptor for error handling
-api.interceptors.response.use(
-  (response) => response,
+// Response interceptor for error handling AND adaptation
+api.interceptors.response. use(
+  (response) => {
+    // Adaptar la respuesta para agregar "success"
+    response.data = adaptResponse(response. data);
+    return response;
+  },
   (error) => {
     if (error.response) {
       // Server responded with error
@@ -33,7 +38,7 @@ api.interceptors.response.use(
       throw new Error(message);
     } else if (error.request) {
       // Request made but no response
-      throw new Error('No response from server. Please check your connection.');
+      throw new Error('No response from server.  Please check your connection.');
     } else {
       // Error in request setup
       throw new Error(error.message || 'Request failed');

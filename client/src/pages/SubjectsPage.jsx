@@ -19,7 +19,7 @@ const SubjectsPage = () => {
   }, [institutionId, studentId]);
 
   const loadSubjects = async () => {
-    if (!institutionId || !studentId) {
+    if (! institutionId || !studentId) {
       setError('Please configure Institution ID and Student ID in Dashboard');
       setLoading(false);
       return;
@@ -29,7 +29,8 @@ const SubjectsPage = () => {
     setError('');
     try {
       const response = await subjectsService.getAll(institutionId, studentId);
-      if (response.success && response.data) {
+      // Cambiar de response.success a response.status === 200
+      if (response.data && response.status === 200) {
         setSubjects(response.data);
       }
     } catch (err) {

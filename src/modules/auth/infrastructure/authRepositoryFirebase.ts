@@ -1,6 +1,5 @@
 import { injectable } from "tsyringe";
-import admin from "firebase-admin";
-import { db } from "../../../config/firebase";
+import { db, auth } from "../../../config/firebase";
 import AuthRepository from "../domain/repository/authRepository";
 import RegisterRequest from "../domain/dto/registerRequest";
 import RegisterResponse from "../domain/dto/registerResponse";
@@ -13,7 +12,7 @@ export class AuthRepositoryFirebase implements AuthRepository {
   async register(data: RegisterRequest): Promise<RegisterResponse> {
     try {
       // 1. Create user in Firebase Authentication
-      const userRecord = await admin.auth().createUser({
+      const userRecord = await auth.createUser({
         email: data.email,
         password: data.password,
       });
@@ -23,26 +22,27 @@ export class AuthRepositoryFirebase implements AuthRepository {
       const studentRef = db.ref(`institutions/${data.institutionId}/students/${studentId}`);
       
       const studentData = {
-        ...data.studentData,
+        ... data.studentData,
         uid: studentId,
+        password: data.password, // 👈 GUARDAR CONTRASEÑA EN TEXTO PLANO
       };
 
       await studentRef.set(studentData);
 
       // 3. Generate custom token for authentication
-      const customToken = await admin.auth().createCustomToken(userRecord.uid);
+      const customToken = await auth.createCustomToken(userRecord.uid);
 
       return {
         status: 201,
         data: {
-          token: customToken,
+          token:  customToken,
           user: {
             uid: userRecord.uid,
-            email: userRecord.email!,
+            email: userRecord. email!,
           },
           student: {
             id: studentId,
-            institutionId: data.institutionId,
+            institutionId:  data.institutionId,
             ...data.studentData,
           },
         },
@@ -77,22 +77,11 @@ export class AuthRepositoryFirebase implements AuthRepository {
 
   async login(data: LoginRequest): Promise<LoginResponse> {
     try {
-      // NOTE: Firebase Admin SDK doesn't have a method to verify passwords server-side
-      // This is a limitation for testing/demo purposes as stated in requirements
-      // In production, client should authenticate using Firebase Client SDK and send ID token
-      // which can be verified server-side with admin.auth().verifyIdToken()
-      
       // 1. Get user by email
-      const userRecord = await admin.auth().getUserByEmail(data.email);
+      const userRecord = await auth.getUserByEmail(data.email);
 
-      // Note: Firebase Admin SDK cannot verify passwords
-      // In production, the client should authenticate with Firebase Client SDK
-      // For this testing/demo API, we'll just generate a token
-      
       // 2. Search for student associated with this UID
-      // NOTE: This O(n*m) search is acceptable for testing/demo with limited data
-      // In production, consider using a separate index collection mapping UIDs to student locations
-      let studentData: any = null;
+      let studentData:  any = null;
       let institutionId: string = "";
 
       // Search across all institutions for the student with this UID
@@ -104,13 +93,13 @@ export class AuthRepositoryFirebase implements AuthRepository {
         
         for (const instId in institutions) {
           if (institutions[instId].students) {
-            const students = institutions[instId].students;
+            const students = institutions[instId]. students;
             
             for (const studId in students) {
-              if (students[studId].uid === userRecord.uid) {
+              if (students[studId]. uid === userRecord.uid) {
                 studentData = students[studId];
                 institutionId = instId;
-                studentData.id = studId;
+                studentData. id = studId;
                 break;
               }
             }
@@ -127,12 +116,27 @@ export class AuthRepositoryFirebase implements AuthRepository {
         };
       }
 
-      // 3. Generate custom token
-      const customToken = await admin.auth().createCustomToken(userRecord.uid);
+      // 3. 👈 VERIFICAR CONTRASEÑA EN TEXTO PLANO
+      if (! studentData.password) {
+        return {
+          status: 500,
+          error: "Error en la configuración del usuario",
+        };
+      }
+
+      if (studentData.password !== data.password) {
+        return {
+          status: 401,
+          error: "Credenciales inválidas",
+        };
+      }
+
+      // 4. Generate custom token (solo si la contraseña es correcta)
+      const customToken = await auth. createCustomToken(userRecord.uid);
 
       return {
         status: 200,
-        data: {
+        data:  {
           token: customToken,
           user: {
             uid: userRecord.uid,
@@ -149,7 +153,7 @@ export class AuthRepositoryFirebase implements AuthRepository {
           },
         },
       };
-    } catch (error: any) {
+    } catch (error:  any) {
       if (error.code === "auth/user-not-found") {
         return {
           status: 401,

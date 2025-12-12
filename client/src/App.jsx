@@ -12,6 +12,7 @@ import TasksPage from './pages/TasksPage';
 import GradesPage from './pages/GradesPage';
 import StudentsPage from './pages/StudentsPage';
 import Loading from './components/Common/Loading';
+import ConfigPage from './pages/ConfigPage'; 
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -83,6 +84,7 @@ function App() {
               <Route path="tasks" element={<TasksPage />} />
               <Route path="grades" element={<GradesPage />} />
               <Route path="students" element={<StudentsPage />} />
+              <Route path="config" element={<ConfigPage />} />
             </Route>
 
             {/* Catch all - redirect to dashboard or login */}

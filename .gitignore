@@ -1,5 +1,5 @@
 /node_modules
-.env
+/client/node_modules
 ordinario-desarrollomovil-firebase-adminsdk-fbsvc-7df005391a.json
 /dist
 /coverage
