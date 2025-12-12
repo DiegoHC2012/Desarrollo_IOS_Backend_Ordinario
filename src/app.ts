@@ -13,6 +13,7 @@ import gradesRouter from "./routes/grades.routes";
 import studentRouter from "./routes/student.routes";
 import announcementsRouter from "./routes/announcements.routes";
 import whiteLabelRouter from "./routes/whitelabel.routes";
+import authRouter from "./routes/auth.routes";
 
 // --- Repositories ---
 import { SubjectsRepositoryFirebase } from "./modules/subjects/infrastructure/subjectsRepositoryFirebase";
@@ -21,6 +22,7 @@ import { TasksRepositoryFirebase } from "./modules/tasks/infraestructure/tasksRe
 import { GradesRepositoryFirebase } from "./modules/grades/infraestructure/gradesRepositoryFirebase";
 import { AnnouncementsRepositoryFirebase } from "./modules/announcements/infraestructure/announcementsRepositoryFirebase";
 import { WhiteLabelRepositoryFirebase } from "./modules/whitelabel/infraestructure/whiteLabelRepositoryFirebase";
+import { AuthRepositoryFirebase } from "./modules/auth/infrastructure/authRepositoryFirebase";
 
 const app = express();
 
@@ -55,10 +57,15 @@ container.register("WhiteLabelRepository", {
   useClass: WhiteLabelRepositoryFirebase,
 });
 
+container.register("AuthRepository", {
+  useClass: AuthRepositoryFirebase,
+});
+
 
 // ======================================================
 //   Rutas del sistema
 // ======================================================
+app.use("/auth", authRouter);
 app.use("/subjects", subjectsRouter);
 app.use("/tasks", tasksRouter);
 app.use("/grades", gradesRouter);
